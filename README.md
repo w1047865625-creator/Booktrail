@@ -19,13 +19,11 @@ Booktrail 是一款运行于 **Kindle 原系统**的本地阅读统计工具，�
 
 **`Booktrail-4.6.0.zip`**
 
-解压后按照项目说明完成安装即可。
-
 ## 适用环境
 
-* Kindle 越狱设备
+* Kindle（5.17.1.0可用） 越狱设备
 * Kindle 原生阅读系统
-* KUAL / KPM 安装环境
+* KUAL安装环境
 
 > Booktrail 专注于 Kindle 原生阅读体验，不需要更换阅读器，也不会改变 Kindle 原有的阅读方式。
 
