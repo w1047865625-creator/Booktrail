@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension>
+  <information>
+    <name>Booktrail Reading Statistics</name>
+    <version>4.6.0</version>
+    <author>TQHYG</author>
+    <id>booktrail</id>
+  </information>
+  <menus>
+    <menu type="json" dynamic="true">menu.json</menu>
+  </menus>
+</extension>

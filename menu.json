@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Booktrail 阅读统计",
+      "if": "\"/mnt/us/extensions/booktrail/bin/kindle-reading-gtk\" -f",
+      "action": "./bin/metrics.sh gui",
+      "exitmenu": true,
+      "refresh": false,
+      "internal": "Booktrail Reading Statistics"
+    },
+    {
+      "name": "Booktrail 程序未安装",
+      "if": "\"/mnt/us/extensions/booktrail/bin/kindle-reading-gtk\" -f!",
+      "action": "eips 10 1 'Booktrail 程序未安装'",
+      "exitmenu": true,
+      "refresh": false,
+      "internal": "Booktrail Reading Statistics"
+    }
+  ]
+}
