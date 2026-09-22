@@ -32,9 +32,9 @@ Booktrail-4.6.0.zip
 
 请使用与当前版本匹配的安装包，不要混用不同版本的文件。
 
-### 2. 解压到 Kindle 扩展目录
+### 2. 安装 Booktrail 主程序
 
-将 ZIP 安装包完整解压到：
+将 ZIP 安装包中的 Booktrail 主程序完整解压到：
 
 ```text
 /mnt/us/extensions/booktrail/
@@ -71,7 +71,35 @@ Booktrail-4.6.0.zip
 /mnt/us/extensions/booktrail/bin/
 ```
 
-### 3. 打开 KUAL
+### 3. 安装 Kindle 主页显示入口
+
+安装包中的：
+
+```text
+documents/Booktrail.sh
+```
+
+用于在 Kindle 主页显示 Booktrail 入口。
+
+将这个文件复制到 Kindle 的：
+
+```text
+/mnt/us/documents/
+```
+
+最终路径应为：
+
+```text
+/mnt/us/documents/Booktrail.sh
+```
+
+不要把整个 `documents` 文件夹复制进去，也不要修改 `Booktrail.sh` 的文件名。
+
+安装完成后，返回 Kindle 主页即可看到 Booktrail 的入口；点击该入口即可启动 Booktrail。
+
+> 这个文件只是 Kindle 主页的启动入口，Booktrail 主程序本体仍然必须安装在 `/mnt/us/extensions/booktrail/`。
+
+### 4. 打开 KUAL
 
 1. 安全断开 Kindle 与电脑的连接。
 2. 在 Kindle 上打开 **KUAL**。
@@ -85,7 +113,7 @@ Booktrail-4.6.0.zip
 - 是否错误地多嵌套了一层文件夹；
 - 关闭并重新打开 KUAL，必要时重新插拔 USB 连接。
 
-### 4. 首次启动与数据库
+### 5. 首次启动与数据库
 
 首次打开时，Booktrail 会检查本地数据库：
 
@@ -122,15 +150,23 @@ Booktrail-4.6.0.zip
 
 建议按以下顺序检查：
 
-1. KUAL 中能够看到 **Booktrail 阅读统计**；
-2. 点击后能够打开图形界面；
-3. Kindle 上出现 `booktrail.db`；
-4. 阅读一段时间后重新打开 Booktrail，检查统计数据是否变化；
-5. 如果 GUI 无法启动，优先检查安装目录、可执行文件和数据库初始化状态。
+1. Kindle 主页能够看到 **Booktrail** 入口；
+2. 点击主页入口能够启动 Booktrail；
+3. KUAL 中能够看到 **Booktrail 阅读统计**；
+4. 点击 KUAL 菜单后能够打开图形界面；
+5. Kindle 上出现 `booktrail.db`；
+6. 阅读一段时间后重新打开 Booktrail，检查统计数据是否变化；
+7. 如果 GUI 无法启动，优先检查安装目录、可执行文件和数据库初始化状态。
 
 ## 卸载注意事项
 
 卸载前应先停止 Booktrail 后台采集，并保留数据库备份。
+
+同时删除 Kindle 主页入口文件：
+
+```text
+/mnt/us/documents/Booktrail.sh
+```
 
 不要直接删除 Kindle 系统中的 `syslog-ng.conf`，也不要使用空文件覆盖它。采集配置可能已经合并到系统日志配置中，卸载时应使用项目提供的停用流程恢复配置。
 
@@ -147,4 +183,4 @@ Booktrail-4.6.0.zip
 
 ## 项目地址
 
-[https://github.com/w1047865625-creator/Booktrail](https://github.com/w1047865625-creator/Booktrail)
+https://github.com/w1047865625-creator/Booktrail
